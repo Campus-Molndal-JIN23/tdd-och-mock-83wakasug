@@ -26,8 +26,7 @@ public class WeatherAPI {
          url = new URL(urlWeather);
          con= (HttpURLConnection) url.openConnection();
          con.setRequestMethod("GET");
-         con.connect();
-     }
+         con.connect(); }
 
     public String getData() throws IOException {
         reseponseCode = con.getResponseCode();
@@ -45,7 +44,6 @@ public class WeatherAPI {
             System.out.println("false");
         }
         String data = String.valueOf(new StringBuilder(response));
-
         return data;
     }
 
