@@ -87,14 +87,13 @@ public class WeatherServiceTest {
                 "} ";
         when(mockWeatherAPI.getData()).thenReturn(mockResponse);
         weatherServiceFacade = new WeatherServiceFacade(mockWeatherAPI);
-
     }
 
     /**
      * Test case to verify that the WeatherServiceFacade object is not null.
      */
     @Test
-    public void weatherServiceFacadeNotNull(){
+    public void testWeatherServiceFacadeNotNull(){
         assertNotNull(weatherServiceFacade, "WeatherServiceFacade is null");
     }
 
@@ -102,7 +101,7 @@ public class WeatherServiceTest {
      * Test case to get the weather information
      */
     @Test
-    public void getWeather(){
+    public void testGetWeather(){
 
         String expected = "Clouds";
         String actual = weatherServiceFacade.getWeather();
@@ -113,7 +112,7 @@ public class WeatherServiceTest {
      * Test case to get the wind information.
      */
     @Test
-    public void getWind(){
+    public void testGetWind(){
 
         double expected = 5.14;
         double actual = weatherServiceFacade.getWind();
@@ -125,7 +124,7 @@ public class WeatherServiceTest {
      * Test case to get the humidity information.
      */
     @Test
-    public void getHumidity(){
+    public void testGetHumidity(){
 
         int expected = 67;
         int actual = weatherServiceFacade.getHumidity();
@@ -138,7 +137,7 @@ public class WeatherServiceTest {
      */
 
     @Test
-    public void getClouds(){
+    public void testGetClouds(){
 
         int expected = 90;
         int actual = weatherServiceFacade.getClouds();
@@ -149,7 +148,7 @@ public class WeatherServiceTest {
      * Test case to get the City information.
      */
     @Test
-    public void getCity(){
+    public void testGetCity(){
 
         String expected = "Gothenburg";
        String actual = weatherServiceFacade.getCity();
@@ -161,7 +160,7 @@ public class WeatherServiceTest {
      * Test case to get the Country information.
      */
     @Test
-    public void  getCountry(){
+    public void  testGetCountry(){
         String expected = "SE";
         String actual = weatherServiceFacade.getCountry();
         assertEquals(expected,actual);

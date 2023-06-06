@@ -4,16 +4,20 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+Make a test by using Mock for WeatherApplication
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+1. What was your motivation?
+ + Jag förstår inte riktigt betydelsen av "Mock", så jag ville genom den här uppgiften få en djupare förståelse för det.
 
+2. Why did you build this project?
+ +  Jag ville försöka skriva tester med hjälp av två "Mocks".
+3. What problem does it solve?
+ +  Vilka delar jag ska mocka och hur jag ska använda "Mocks".
+4. What did you learn?
+ + Hur man skapar en "Mock Test"
 ## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -21,8 +25,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 - [License](#license)
 
 ## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+openjdk-19.0.1
 
 ## Usage
 
