@@ -23,6 +23,8 @@ public class WeatherServiceTest {
     private String mockResponse;
 
 
+
+
     @BeforeEach
     void setUP() throws IOException {
 
@@ -125,14 +127,14 @@ public class WeatherServiceTest {
     @Test
     public void getCity(){
 
-        String expected = "";
+        String expected = "Gothenburg";
        String actual = weatherServiceFacade.getCity();
         assertEquals(expected,actual);
 
     }
     @Test
     public void  getCountry(){
-        String expected = "Gothenburg";
+        String expected = "SE";
         String actual = weatherServiceFacade.getCountry();
         assertEquals(expected,actual);
     }
