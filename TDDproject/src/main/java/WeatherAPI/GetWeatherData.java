@@ -1,5 +1,5 @@
 package WeatherAPI;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -15,12 +15,13 @@ String weather;
 
     public GetWeatherData() {
     }
-    public GetWeatherData(String weather, double wind, int clouds, String country, String city) {
+    public GetWeatherData(String weather, double wind, int clouds, String country, String city,int humidity) {
      this.weather = weather;
      this.wind = wind;
      this.clouds = clouds;
      this.country = country;
      this.city = city;
+     this.humidity = humidity;
 
     }
 
@@ -56,13 +57,15 @@ String weather;
         var wind = obj.getJSONObject("wind");
         var clouds = obj.getJSONObject("clouds");
         var sys = obj.getJSONObject("sys");
+        var humidity = obj.getJSONObject("main");
         JSONObject weather2 = weather.getJSONObject(0);
         GetWeatherData weatherdata = new GetWeatherData(
                 weather2.getString("main"),
-                wind.getInt("speed"),
+                wind.getDouble("speed"),
                 clouds.getInt("all"),
                 sys.getString("country"),
-                obj.getString("name"));
+                obj.getString("name"),
+                humidity.getInt("humidity"));
 
         return weatherdata;
     }

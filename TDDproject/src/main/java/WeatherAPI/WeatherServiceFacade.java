@@ -37,7 +37,7 @@ public class WeatherServiceFacade {
     }
 
     public String getCountry(){
-        return getCountry();
+        return getWeatherData.getCountry();
     }
 
 }

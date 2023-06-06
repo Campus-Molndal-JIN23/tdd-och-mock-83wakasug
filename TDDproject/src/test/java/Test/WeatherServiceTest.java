@@ -14,7 +14,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-
+/**
+ *  test class for the WeatherServiceFacade class.
+ */
 
 public class WeatherServiceTest {
     private WeatherServiceFacade weatherServiceFacade;
@@ -24,6 +26,10 @@ public class WeatherServiceTest {
 
 
 
+    /**
+     * Set up the test environment before each test case.
+     * @throws IOException if an error occurs
+     */
 
     @BeforeEach
     void setUP() throws IOException {
@@ -84,11 +90,17 @@ public class WeatherServiceTest {
 
     }
 
+    /**
+     * Test case to verify that the WeatherServiceFacade object is not null.
+     */
     @Test
     public void weatherServiceFacadeNotNull(){
         assertNotNull(weatherServiceFacade, "WeatherServiceFacade is null");
     }
 
+    /**
+     * Test case to get the weather information
+     */
     @Test
     public void getWeather(){
 
@@ -97,7 +109,9 @@ public class WeatherServiceTest {
         assertEquals(expected,actual);
 
     }
-
+    /**
+     * Test case to get the wind information.
+     */
     @Test
     public void getWind(){
 
@@ -106,6 +120,10 @@ public class WeatherServiceTest {
         assertEquals(expected,actual);
 
     }
+
+    /**
+     * Test case to get the humidity information.
+     */
     @Test
     public void getHumidity(){
 
@@ -115,6 +133,10 @@ public class WeatherServiceTest {
 
     }
 
+    /**
+     * Test case to get the cloud information.
+     */
+
     @Test
     public void getClouds(){
 
@@ -123,7 +145,9 @@ public class WeatherServiceTest {
         assertEquals(expected,actual);
 
     }
-
+    /**
+     * Test case to get the City information.
+     */
     @Test
     public void getCity(){
 
@@ -132,6 +156,10 @@ public class WeatherServiceTest {
         assertEquals(expected,actual);
 
     }
+
+    /**
+     * Test case to get the Country information.
+     */
     @Test
     public void  getCountry(){
         String expected = "SE";
