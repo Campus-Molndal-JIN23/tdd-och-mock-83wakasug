@@ -18,8 +18,8 @@ import org.mockito.Mockito;
 
 public class WeatherServiceTest {
     private WeatherServiceFacade weatherServiceFacade;
-    private GetWeatherData getWeatherDataMock;
     private WeatherAPI mockWeatherAPI;
+    private GetWeatherData getWeatherDataMock;
     private String mockResponse;
 
 
@@ -27,7 +27,6 @@ public class WeatherServiceTest {
     void setUP() throws IOException {
 
         //Mock WeatherService
-
         getWeatherDataMock = Mockito.mock(GetWeatherData.class);
         mockWeatherAPI = Mockito.mock(WeatherAPI.class);
 
@@ -84,12 +83,59 @@ public class WeatherServiceTest {
     }
 
     @Test
-    public void getWeather(){
+    public void weatherServiceFacadeNotNull(){
         assertNotNull(weatherServiceFacade, "WeatherServiceFacade is null");
+    }
+
+    @Test
+    public void getWeather(){
+
         String expected = "Clouds";
         String actual = weatherServiceFacade.getWeather();
         assertEquals(expected,actual);
 
     }
+
+    @Test
+    public void getWind(){
+
+        double expected = 5.14;
+        double actual = weatherServiceFacade.getWind();
+        assertEquals(expected,actual);
+
+    }
+    @Test
+    public void getHumidity(){
+
+        int expected = 67;
+        int actual = weatherServiceFacade.getHumidity();
+        assertEquals(expected,actual);
+
+    }
+
+    @Test
+    public void getClouds(){
+
+        int expected = 90;
+        int actual = weatherServiceFacade.getClouds();
+        assertEquals(expected,actual);
+
+    }
+
+    @Test
+    public void getCity(){
+
+        String expected = "";
+       String actual = weatherServiceFacade.getCity();
+        assertEquals(expected,actual);
+
+    }
+    @Test
+    public void  getCountry(){
+        String expected = "Gothenburg";
+        String actual = weatherServiceFacade.getCountry();
+        assertEquals(expected,actual);
+    }
+
 
 }

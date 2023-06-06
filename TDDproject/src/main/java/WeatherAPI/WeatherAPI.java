@@ -20,9 +20,10 @@ public class WeatherAPI {
     InputStreamReader isr;
     BufferedReader br;
     String inputLine = null;
+    String APIkey;
 
      public  WeatherAPI () throws IOException {
-         urlWeather ="https://api.openweathermap.org/data/2.5/weather?lat=35.709674&lon=139.454224&appid=078b6a44477c3731ef8f22b87cd35f26";
+         urlWeather ="https://api.openweathermap.org/data/2.5/weather?lat=35.709674&lon=139.454224&"+APIkey;
          url = new URL(urlWeather);
          con= (HttpURLConnection) url.openConnection();
          con.setRequestMethod("GET");
