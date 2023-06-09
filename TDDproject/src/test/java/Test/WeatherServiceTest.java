@@ -35,7 +35,7 @@ public class WeatherServiceTest {
     void setUP() throws IOException {
 
         //Mock WeatherService
-        getWeatherDataMock = Mockito.mock(GetWeatherData.class);
+        //getWeatherDataMock = Mockito.mock(GetWeatherData.class);
         mockWeatherAPI = Mockito.mock(WeatherAPI.class);
 
 
@@ -164,6 +164,7 @@ public class WeatherServiceTest {
         String expected = "SE";
         String actual = weatherServiceFacade.getCountry();
         assertEquals(expected,actual);
+        
     }
 
 
